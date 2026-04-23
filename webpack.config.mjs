@@ -1,4 +1,5 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import { watchFile } from "node:fs";
 import path from "node:path";
 
 export default {
@@ -9,9 +10,13 @@ export default {
     path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
   },
+  devtool: "eval-source-map",
+  devServer: {
+    watchFiles: ["./src/template.html"],
+  },
   plugins: [
     new HtmlWebpackPlugin({
-        template: "./src/index.html",
+        template: "./src/template.html",
     }),
   ],
   module: {
