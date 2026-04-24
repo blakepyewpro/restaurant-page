@@ -28,6 +28,15 @@ header, div#content, footer {
   padding: 5px;
 }
 
+div#content {
+  width: 50%;
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -47,15 +56,11 @@ button {
   border: 2px solid #272343;
   border-radius: 4px;
   font-weight: bold;
+  font-size: 16px;
 
   margin: 3px;
-  padding: 3px;
+  padding: 10px 3px;
   min-width: 75px;
-}
-
-div#content {
-  display: flex;
-  flex-direction: column;
 }
 
 div#title {
@@ -63,9 +68,22 @@ div#title {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 20px;
 }
 
 div#title > img {
-  max-height: 100px;
+  max-height: 75px;
+}
+
+div#content > div {
+  margin: 0 0 20px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p.bold{
+  font-weight: bold;
+  font-size: large;
 }
